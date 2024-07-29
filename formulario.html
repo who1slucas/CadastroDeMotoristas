@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Motoristas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #6f42c1; /* Roxo escuro */
+            color: white;
+            border-radius: 8px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white; /* Cor do texto em branco */
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-top: 0;
+            color: #6f42c1; /* Roxo escuro */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        button {
+            background-color: #6f42c1; /* Roxo escuro */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        button:hover {
+            background-color: #5a2b8f; /* Roxo mais escuro */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Cadastro de Motoristas Mara</h1>
+        </div>
+        <div class="form-container">
+            <form method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="cnpj_cpf">CNPJ/CPF:</label>
+                <input type="text" id="cnpj_cpf" name="cnpj_cpf" required pattern="\d{11}|\d{14}" title="Digite 11 dígitos para CPF ou 14 para CNPJ">
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required pattern="\d+" title="Digite apenas números">
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione um estado</option>
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Outros">Outros</option>
+                </select>
+
+                <label for="cidade">Cidade:</label>
+                <select id="cidade" name="cidade" required>
+                    <option value="">Selecione uma cidade</option>
+                    <!-- Listar todas as cidades conforme fornecido anteriormente -->
+                    <option value="São Paulo (SP)">São Paulo (SP)</option>
+                    <option value="Arujá (SP)">Arujá (SP)</option>
+                    <option value="Barueri (SP)">Barueri (SP)</option>
+                    <option value="Biritiba Mirim (SP)">Biritiba Mirim (SP)</option>
+                    <option value="Caieiras (SP)">Caieiras (SP)</option>
+                    <option value="Cajamar (SP)">Cajamar (SP)</option>
+                    <option value="Carapicuíba (SP)">Carapicuíba (SP)</option>
+                    <option value="Cotia (SP)">Cotia (SP)</option>
+                    <option value="Diadema (SP)">Diadema (SP)</option>
+                    <option value="Embu (SP)">Embu (SP)</option>
+                    <option value="Embu-Guaçu (SP)">Embu-Guaçu (SP)</option>
+                    <option value="Ferraz de Vasconcelos (SP)">Ferraz de Vasconcelos (SP)</option>
+                    <option value="Francisco Morato (SP)">Francisco Morato (SP)</option>
+                    <option value="Franco da Rocha (SP)">Franco da Rocha (SP)</option>
+                    <option value="Guararema (SP)">Guararema (SP)</option>
+                    <option value="Guarulhos (SP)">Guarulhos (SP)</option>
+                    <option value="Itapecerica da Serra (SP)">Itapecerica da Serra (SP)</option>
+                    <option value="Itapevi (SP)">Itapevi (SP)</option>
+                    <option value="Itaquaquecetuba (SP)">Itaquaquecetuba (SP)</option>
+                    <option value="Jandira (SP)">Jandira (SP)</option>
+                    <option value="Juquitiba (SP)">Juquitiba (SP)</option>
+                    <option value="Mairiporã (SP)">Mairiporã (SP)</option>
+                    <option value="Mauá (SP)">Mauá (SP)</option>
+                    <option value="Mogi das Cruzes (SP)">Mogi das Cruzes (SP)</option>
+                    <option value="Osasco (SP)">Osasco (SP)</option>
+                    <option value="Pirapora do Bom Jesus (SP)">Pirapora do Bom Jesus (SP)</option>
+                    <option value="Poá (SP)">Poá (SP)</option>
+                    <option value="Ribeirão Pires (SP)">Ribeirão Pires (SP)</option>
+                    <option value="Rio Grande da Serra (SP)">Rio Grande da Serra (SP)</option>
+                    <option value="Salesópolis (SP)">Salesópolis (SP)</option>
+                    <option value="Santa Elizabeth (SP)">Santa Elizabeth (SP)</option>
+                    <option value="Santana do Parnaíba (SP)">Santana do Parnaíba (SP)</option>
+                    <option value="São Bernardo do Campo (SP)">São Bernardo do Campo (SP)</option>
+                    <option value="São Caetano do Sul (SP)">São Caetano do Sul (SP)</option>
+                    <option value="São Lourenço da Serra (SP)">São Lourenço da Serra (SP)</option>
+                    <option value="Suzano (SP)">Suzano (SP)</option>
+                    <option value="Taboão da Serra (SP)">Taboão da Serra (SP)</option>
+                    <option value="Vargem Grande Paulista (SP)">Vargem Grande Paulista (SP)</option>
+                </select>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required pattern="\d{8}" title="Digite exatamente 8 dígitos">
+
+                <label for="ddd">DDD:</label>
+                <input type="text" id="ddd" name="ddd" required pattern="\d{2}" title="Digite exatamente 2 dígitos">
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required pattern="\d{9}" title="Digite exatamente 9 dígitos">
+
+                <label for="chave_pix">Chave PIX:</label>
+                <input type="text" id="chave_pix" name="chave_pix" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="footer">
+            &copy; 2024 Mara. Todos os direitos reservados.
+        </div>
+    </div>
+</body>
+</html>
